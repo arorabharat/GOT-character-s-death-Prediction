@@ -7,7 +7,7 @@ import pandas as pd
 import os 
 import math
 
-pred = pd.read_csv("plot_data.csv")
+pred = pd.read_csv("Formated_data_corrected.csv")
 
 pred_header = list(pred)
 
