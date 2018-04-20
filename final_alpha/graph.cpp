@@ -156,6 +156,9 @@ int main() {
 			wrong++;
 			score_out<<output[i].se<<" X "<<output[i].fi<<" "<<death[output[i].se]<<endl;
 		}
+		else if(year[output[i].se]==0 && output[i].fi>avg){
+			score_out<<output[i].se<<" P "<<output[i].fi<<" "<<death[output[i].se]<<endl;
+		}
 	}
 	double acc=correct*100/(wrong+correct);
 	cout<<"accuracy is :"<<acc<<endl;
