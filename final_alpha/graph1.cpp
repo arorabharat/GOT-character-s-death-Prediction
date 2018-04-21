@@ -145,6 +145,7 @@ int main() {
 	}
 	avg=avg/n;
 	sort(output,output+LIMT,greater<pint>());
+	cout << "after sort" << endl;
 	int correct=0;
 	int wrong=0;
 	loop(0,LIMT,i){
@@ -160,6 +161,9 @@ int main() {
 			score_out<<output[i].se<<" P "<<output[i].fi<<" "<<death[output[i].se]<<endl;
 		}
 	}
+	cout << "just before acc" << endl;
+	cout << "wrong is" + wrong <<endl;
+	cout << "correct is" + correct <<endl;
 	double acc=correct*100/(wrong+correct);
 	cout<<"accuracy is :"<<acc<<endl;
 	return 0;
