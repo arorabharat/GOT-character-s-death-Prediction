@@ -139,7 +139,7 @@ int main() {
 			output[i].fi=score[i];
 			output[i].se=i;
 		}
-		score_out<<i<<" "<<score[i]<<endl;
+		score_out<<output[i].se<<" "<<(double)output[i].fi<<endl;
 	}
 	loop(1,n+1,i){
 		avg+=output[i].fi;
