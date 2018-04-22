@@ -139,32 +139,33 @@ int main() {
 			output[i].fi=score[i];
 			output[i].se=i;
 		}
+		score_out<<i<<" "<<score[i]<<endl;
 	}
 	loop(1,n+1,i){
 		avg+=output[i].fi;
 	}
-	avg=avg/n;
-	sort(output,output+LIMT,greater<pint>());
-	cout << "after sort" << endl;
-	int correct=0;
-	int wrong=0;
-	loop(0,LIMT,i){
-		if(death[output[i].se]==0 && output[i].fi>avg && year[output[i].se]>=YR){
-			correct++;
-			score_out<<output[i].se<<" _/ "<<output[i].fi<<" "<<death[output[i].se]<<endl;
-		}
-		else if(output[i].fi<=avg && year[output[i].se]>=YR){
-			wrong++;
-			score_out<<output[i].se<<" X "<<output[i].fi<<" "<<death[output[i].se]<<endl;
-		}
-		else if(year[output[i].se]==0 && output[i].fi>avg){
-			score_out<<output[i].se<<" P "<<output[i].fi<<" "<<death[output[i].se]<<endl;
-		}
-	}
-	cout << "just before acc" << endl;
-	cout << "wrong is" + wrong <<endl;
-	cout << "correct is" + correct <<endl;
-	double acc=correct*100/(wrong+correct);
-	cout<<"accuracy is :"<<acc<<endl;
+	// avg=avg/n;
+	// sort(output,output+LIMT,greater<pint>());
+	// cout << "after sort" << endl;
+	// int correct=0;
+	// int wrong=0;
+	// loop(0,LIMT,i){
+	// 	if(death[output[i].se]==0 && output[i].fi>avg && year[output[i].se]>=YR){
+	// 		correct++;
+	// 		score_out<<output[i].se<<" _/ "<<output[i].fi<<" "<<death[output[i].se]<<endl;
+	// 	}
+	// 	else if(output[i].fi<=avg && year[output[i].se]>=YR){
+	// 		wrong++;
+	// 		score_out<<output[i].se<<" X "<<output[i].fi<<" "<<death[output[i].se]<<endl;
+	// 	}
+	// 	else if(year[output[i].se]==0 && output[i].fi>avg){
+	// 		score_out<<output[i].se<<" P "<<output[i].fi<<" "<<death[output[i].se]<<endl;
+	// 	}
+	// }
+	// cout << "just before acc" << endl;
+	// cout << "wrong is" + wrong <<endl;
+	// cout << "correct is" + correct <<endl;
+	// double acc=correct*100/(wrong+correct);
+	// cout<<"accuracy is :"<<acc<<endl;
 	return 0;
 }
